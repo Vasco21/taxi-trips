@@ -1,4 +1,4 @@
-# Taxi trips
+<!-- # Taxi trips
 
 A local study is looking into the national minibus taxi industry in South Africa and they need help analyzing some data.
 
@@ -96,4 +96,4 @@ Fork and clone this repository.
 * Do your own work - we will see if you are copying code.
 * Ask mentors if you need clarification - email them `mentors@projectcodex.co`.
 * Enjoy it!
-
+ -->
