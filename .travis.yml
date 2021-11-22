@@ -5,8 +5,10 @@ node_js:
 env:
    - DATABASE_URL=postgresql://postgres@localhost:5432/my_taxi_tests;
 before_script:
-  - psql -c 'create database my_taxi_tests' -U postgres  
-  - psql -U postgres -d my_taxi_tests -a -f data/tables.sql
+   - psql -c 'create database my_taxi_tests;' -U postgres
+  - psql -U postgres -d my_taxi_tests -a -f sql/tables.sql
+  - psql -U postgres -d my_taxi_tests -a -f sql/data.sql
+l
  
 services:
   - postgresql
