@@ -25,7 +25,6 @@ module.exports = function(database) {
     }
 
     var findTripsByRegNumber = async function (regNumber) {
-
         const trips = await pool.query(`SELECT route_id FROM taxi
         INNER JOIN trip ON taxi.id = trip.taxi_id
         INNER JOIN route ON trip.route_id = route.id
