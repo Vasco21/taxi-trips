@@ -1,26 +1,25 @@
-CREATE TABLE Route(
-    route_id SERIAL PRIMARY KEY,
-    town_name text NOT NULL,
-    fare INT
-);
+CREATE TABLE route(
+    id serial not null primary key,
+	route_name text not null,
+	fare decimal(10,2)
+    );
 
 CREATE TABLE taxi(
-    reg_id SERIAL PRIMARY KEY,
-    reg_number TEXT NOT NULL,
-    region_id int NOT NULL,
-    FOREIGN KEY (region_id) REFERENCES  region(region_id)
-);
-
+      id serial not null primary key,
+    reg_number text not null,
+    taxi_reg int,
+    foreign key (taxi_reg) references regions(id)
+    );
 
 CREATE TABLE trip(
-    trip_id SERIAL NOT NULL PRIMARY KEY,
-    route_id int NOT NULL,
-    reg_id int NOT NULL,
-    FOREIGN KEY (reg_id) REFERENCES  taxi(reg_id),
-    FOREIGN KEY (route_id) REFERENCES  Route(route_id)
+    id serial not null primary key,
+    route_id int,
+    taxi_id int,
+    foreign key (route_id) references route(id),
+	foreign key (taxi_id) references taxi(id) 
 );
 
 CREATE TABLE region(
-    region_id SERIAL NOT NULL PRIMARY KEY,
-    region_name TEXT NOT NULL
-);
+    id int primary key  not null, 
+    region_name text not null
+    );
