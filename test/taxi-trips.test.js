@@ -20,7 +20,7 @@ describe('Taxi Trips', function () {
 
         const taxiTrips = TaxiTrips(pool);
 
-        assert.equal(21, await taxiTrips.totalTripCount());
+        assert.equal(27, await taxiTrips.totalTripCount());
     
     });
 
@@ -53,9 +53,9 @@ describe('Taxi Trips', function () {
 
         const taxiTrips = TaxiTrips(pool);
 
-        assert.equal(0, await taxiTrips.findTripsByRegion('Cape Town'));
-        assert.equal(6, await taxiTrips.findTripsByRegion('Gauteng'));
-        assert.equal(6, await taxiTrips.findTripsByRegion('Gauteng'));
+        assert.equal(12, await taxiTrips.findTripsByRegion('Cape Town'));
+        assert.equal(9, await taxiTrips.findTripsByRegion('Gauteng'));
+        assert.equal(9, await taxiTrips.findTripsByRegion('Gauteng'));
 
     });
 

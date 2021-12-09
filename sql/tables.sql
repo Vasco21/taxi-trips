@@ -13,7 +13,7 @@ CREATE TABLE taxi(
       id serial not null primary key,
     reg_number text not null,
     taxi_reg int,
-    foreign key (taxi_reg) references regions(id)
+    foreign key (taxi_reg) references region(id)
     );
 
 CREATE TABLE trip(
