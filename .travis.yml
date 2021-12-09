@@ -13,4 +13,3 @@ before_script:
  
 services:
   - postgresql
-  - "npm run create"

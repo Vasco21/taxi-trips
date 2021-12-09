@@ -1,3 +1,8 @@
+CREATE TABLE region(
+    id int primary key  not null, 
+    region_name text not null
+);
+
 CREATE TABLE route(
     id serial not null primary key,
 	route_name text not null,
@@ -19,7 +24,3 @@ CREATE TABLE trip(
 	foreign key (taxi_id) references taxi(id) 
 );
 
-CREATE TABLE region(
-    id int primary key  not null, 
-    region_name text not null
-    );
